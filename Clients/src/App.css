@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inclusive Sans', sans-serif;
+}
+
+.animate{
+  animation: show .4s ease-in;
+}
+
+@keyframes show {
+  0%{
+    opacity: 0;
+    bottom: 0;
+  }
+  100%{
+    opacity: 1;
+    bottom: 1;
+  }
+}
+
+/* font-family: 'Poppins', sans-serif; */
+
+
+/* =========Top nav============ */
+
+.details-topnav {
+  background-color: #0f0f3d;
+  clip-path: polygon(0 0, 100% 0, 91% 100%, 0% 101%);
+}
+
+.logo-container{
+  background-color: #3969b3;
+  clip-path: polygon(0 0, 100% 0, 85.5% 101%, 0% 102%);
+}
+
+/* ==============Navbar============ */
+.navlink a:hover,
+.active {
+  color: red !important;
+}
+
+.navlink a {
+  position: relative;
+  transition: all .4s;
+}
+
+.navlink a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  transition: all .4s;
+}
+
+a.active::after {
+  width: 100%;
+}
+
+.navlink:hover a::after {
+  width: 100%;
+}
+
+/* ==========Slider============== */
+
+/* .slide img{
+animation: zoom 20s ease-in infinite;
+}
+ @keyframes zoom {
+  0%{
+    scale: 1;
+  }
+  100%{
+    scale: 2;
+  }
+ } */
+
+ 
+
+.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right,
+.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
+  display: none;
+}
+
+
+/* ===========About section ============= */
+
+.img-box {
+  clip-path: polygon(0 0, 100% 0, 92% 101%, 0% 101%);
+}
+
+
+/* ==========trending offer============== */
+
+.section-heading {
+  position: relative;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  left: 45%;
+  margin: 0 auto;
+  bottom: -20px;
+  width: 100px;
+  height: 4px;
+  background-color: #0ab7fc;
+}
+
+
+.section-heading h2::after {
+  background-color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+  .section-heading::after {
+    top: 40px;
+    left: 35%;
+  }
+}
+
+
+/* @media screen and (max-width: 768px) {
+  .section-heading::after {
+    top: 40px;
+    left: 50%;
+  }
+} */
+
+.brandCards {
+  box-shadow: 0 0 1px 1px #aaa7a7;
+  transition: all .4s ease;
+}
+
+.brandCards:hover {
+  box-shadow: 0 0 4px 4px #333;
+}
+
+
+/* ===============service================= */
+
+
+
+.service-wrapper .service .overlay {
+  transform: translateY(-100px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all .4s;
+}
+
+.service:hover .overlay {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ==========offers=============== */
+
+.offer-section {
+  background-image: linear-gradient(rgba(4, 11, 105, 0.938), rgba(12, 20, 112, 0.692));
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* =========Footer============ */
+
+.footer-section,
+.bredcrumb {
+  background-image: linear-gradient(rgba(7, 10, 46, 0.925), rgba(6, 9, 39, 0.863)), url('./assets/background-img.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bottom-footer {
+  clip-path: polygon(0 0, 100% 0, 86.5% 101%, 0% 101%);
+
+}
+
+/* ==========Team Member card=========== */
+
+.img-wrapper {
+  position: relative;
+}
+
+.img-wrapper img {
+  position: relative;
+  /* clip-path: polygon(0 0, 97% 0, 100% 100%, 0% 100%); */
+}
+
+.img-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 95%;
+  left: 0px;
+  top: 20px;
+  bottom: 0;
+  background-color: orange;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+  transition: all .4s ease;
+}
+
+.img-wrapper::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 70px;
+  width: 30px;
+  background-color: red;
+  background-color: transparent;
+  border: 1px solid black;
+  border-right: 0;
+  border-top: 0;
+  transition: all .4s ease;
+}
+
+.member:hover .img-wrapper::after {
+  left: -15px;
+  bottom: -15px;
+}
+
+.member:hover .img-wrapper::before {
+  left: 20px;
+  width: 100%;
+}
+
+.service-container,
+.available-cities,
+.why-choose-us-wrapper,
+.offer-section,
+.mobile-app,
+.service-problem,
+.testimonial{
+  color: white !important;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),url('./assets/bg-img.jpg');
+  background-position: center;
+  background-size: cover;
+}
